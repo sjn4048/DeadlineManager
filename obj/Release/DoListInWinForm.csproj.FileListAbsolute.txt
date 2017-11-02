@@ -1,0 +1,10 @@
+D:\Code\C#\我的项目\DoListInWinForm\bin\Release\DoListInWinForm.exe.config
+D:\Code\C#\我的项目\DoListInWinForm\bin\Release\DoListInWinForm.exe
+D:\Code\C#\我的项目\DoListInWinForm\bin\Release\DoListInWinForm.pdb
+D:\Code\C#\我的项目\DoListInWinForm\obj\Release\DoListInWinForm.Form_AddNewThing.resources
+D:\Code\C#\我的项目\DoListInWinForm\obj\Release\DoListInWinForm.Form_MainForm.resources
+D:\Code\C#\我的项目\DoListInWinForm\obj\Release\DoListInWinForm.Properties.Resources.resources
+D:\Code\C#\我的项目\DoListInWinForm\obj\Release\DoListInWinForm.csproj.GenerateResource.Cache
+D:\Code\C#\我的项目\DoListInWinForm\obj\Release\DoListInWinForm.csproj.CoreCompileInputs.cache
+D:\Code\C#\我的项目\DoListInWinForm\obj\Release\DoListInWinForm.exe
+D:\Code\C#\我的项目\DoListInWinForm\obj\Release\DoListInWinForm.pdb
