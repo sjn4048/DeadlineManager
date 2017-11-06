@@ -14,6 +14,7 @@ namespace DoListInWinForm
     {
         private bool isModifyMode = false;
         TodoData currentData;
+        List<TodoData> currentList;
 
         public Form_AddNewThing()
         {
@@ -24,7 +25,7 @@ namespace DoListInWinForm
             //this.ddlDateTimePicker.ShowUpDown = true;
         }
 
-        public Form_AddNewThing(TodoData todoData)
+        public Form_AddNewThing(TodoData todoData, List<TodoData> list = null)
         {
             InitializeComponent();
 
@@ -32,6 +33,7 @@ namespace DoListInWinForm
             this.ddlDateTimePicker.Format = DateTimePickerFormat.Custom;
             isModifyMode = true;
             currentData = todoData ?? throw new Exception("Null Reference.");
+            currentList = list;
             Text = "修改事件";
             nameLabel.Text = todoData.Name;
             typeComboBox.SelectedIndex = (int)todoData.ThingType;
@@ -55,15 +57,14 @@ namespace DoListInWinForm
             TimeSpan repeatPeriod = new TimeSpan();
             if (nameLabel.Text == string.Empty
                 || typeComboBox.SelectedIndex == -1
-                || ddlDateTimePicker.Value < DateTime.Today
                 || importanceComboBox.SelectedIndex == -1
                 || repeatComboBox.SelectedIndex == -1
                 )
             {
-                MessageBox.Show(text:"不合法的输入", icon:MessageBoxIcon.Error, caption:"错误", buttons:MessageBoxButtons.OK);
+                MessageBox.Show(text: "不合法的输入", icon: MessageBoxIcon.Error, caption: "错误", buttons: MessageBoxButtons.OK);
                 return;
             }
-            switch(repeatComboBox.SelectedIndex)
+            switch (repeatComboBox.SelectedIndex)
             {
                 case 0:
                     isRepeat = false;
@@ -75,9 +76,13 @@ namespace DoListInWinForm
                     repeatPeriod = new TimeSpan(365, 0, 0, 0);
                     break;
             }
-            var newThing = TodoData.CreateNewThing(nameLabel.Text, ddlDateTimePicker.Value,(TodoData.Importance)importanceComboBox.SelectedIndex, (TodoData.Type)typeComboBox.SelectedIndex, isRepeat, repeatPeriod);
+            var newThing = TodoData.CreateNewThing(nameLabel.Text, ddlDateTimePicker.Value, (TodoData.Importance)importanceComboBox.SelectedIndex, (TodoData.Type)typeComboBox.SelectedIndex, isRepeat, repeatPeriod);
             if (isModifyMode)
+            {
                 TodoData.doList.Remove(currentData);//还是有小bug
+                currentList.Remove(currentData);
+            }
+
             //DataWriter dataWriter = new DataWriter();
             //dataWriter.WriteIntoCSV(newThing);
             this.Close();
@@ -90,7 +95,7 @@ namespace DoListInWinForm
 
         private void Form_AddNewThing_FormClosed(object sender, FormClosedEventArgs e)
         {
-            
+
         }
     }
 }

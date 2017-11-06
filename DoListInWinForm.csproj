@@ -50,6 +50,12 @@
   <ItemGroup>
     <Compile Include="DataReader.cs" />
     <Compile Include="DataWriter.cs" />
+    <Compile Include="Form_AboutForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_AboutForm.Designer.cs">
+      <DependentUpon>Form_AboutForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_AddNewThing.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -65,6 +71,9 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TodoData.cs" />
+    <EmbeddedResource Include="Form_AboutForm.resx">
+      <DependentUpon>Form_AboutForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_AddNewThing.resx">
       <DependentUpon>Form_AddNewThing.cs</DependentUpon>
     </EmbeddedResource>
@@ -99,6 +108,20 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icon.ico" />
+    <None Include="Resources\success.ico" />
+    <None Include="Resources\setting_3.ico" />
+    <None Include="Resources\setting.ico" />
+    <None Include="Resources\metal.ico" />
+    <None Include="Resources\information.ico" />
+    <None Include="Resources\icon.ico" />
+    <None Include="Resources\finished.ico" />
+    <None Include="Resources\edit.ico" />
+    <None Include="Resources\delete.ico" />
+    <None Include="Resources\clock.ico" />
+    <None Include="Resources\bell.ico" />
+    <None Include="Resources\add_2.ico" />
+    <None Include="Resources\refresh.ico" />
+    <None Include="Resources\Settings.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

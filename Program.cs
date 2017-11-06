@@ -16,7 +16,7 @@ namespace DoListInWinForm
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form_MainForm());
+            Application.Run(new Form_MainForm() { StartPosition = FormStartPosition.CenterScreen});
         }
     }
 }
