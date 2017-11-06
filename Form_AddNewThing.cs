@@ -77,14 +77,14 @@ namespace DoListInWinForm
                     break;
             }
             var newThing = TodoData.CreateNewThing(nameLabel.Text, ddlDateTimePicker.Value, (TodoData.Importance)importanceComboBox.SelectedIndex, (TodoData.Type)typeComboBox.SelectedIndex, isRepeat, repeatPeriod);
+            TodoData.doList.Add(newThing);
+            currentList?.Add(newThing);
+
             if (isModifyMode)
             {
                 TodoData.doList.Remove(currentData);//还是有小bug
                 currentList.Remove(currentData);
             }
-
-            //DataWriter dataWriter = new DataWriter();
-            //dataWriter.WriteIntoCSV(newThing);
             this.Close();
         }
 

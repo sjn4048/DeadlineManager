@@ -25,7 +25,8 @@ namespace DoListInWinForm
                 bool isFinished = bool.Parse(dataPart[4]);
                 bool isRepeat = bool.Parse(dataPart[5]);
                 TimeSpan repeatPeriod = TimeSpan.Parse(dataPart[6]);
-                TodoData.CreateNewThing(name, deadline, importance, type, isRepeat, repeatPeriod, isFinished);
+                var newThing = TodoData.CreateNewThing(name, deadline, importance, type, isRepeat, repeatPeriod, isFinished);
+                TodoData.doList.Add(newThing);
             }
             ///
             ///To Be Written

@@ -53,8 +53,6 @@ namespace DoListInWinForm
             };
             if (newThing.IsRepeat)   //校正
                 newThing.IsFinished = false;
-            doList.Add(newThing);
-
             return newThing;
         }
 
