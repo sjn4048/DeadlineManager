@@ -61,21 +61,21 @@
             // 
             this.pictureBox5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox5.Image = global::DoListInWinForm.Properties.Resources.setting;
-            this.pictureBox5.Location = new System.Drawing.Point(193, 908);
+            this.pictureBox5.Location = new System.Drawing.Point(199, 908);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(65, 59);
+            this.pictureBox5.Size = new System.Drawing.Size(55, 55);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox5.TabIndex = 0;
             this.pictureBox5.TabStop = false;
-            this.pictureBox5.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.pictureBox5.Click += new System.EventHandler(this.SettingButton_click);
             // 
             // ShiftPictureBox
             // 
             this.ShiftPictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ShiftPictureBox.Image = global::DoListInWinForm.Properties.Resources.finished;
-            this.ShiftPictureBox.Location = new System.Drawing.Point(20, 908);
+            this.ShiftPictureBox.Location = new System.Drawing.Point(23, 907);
             this.ShiftPictureBox.Name = "ShiftPictureBox";
-            this.ShiftPictureBox.Size = new System.Drawing.Size(59, 60);
+            this.ShiftPictureBox.Size = new System.Drawing.Size(57, 60);
             this.ShiftPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ShiftPictureBox.TabIndex = 0;
             this.ShiftPictureBox.TabStop = false;
@@ -85,9 +85,9 @@
             // 
             this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox4.Image = global::DoListInWinForm.Properties.Resources.information;
-            this.pictureBox4.Location = new System.Drawing.Point(107, 908);
+            this.pictureBox4.Location = new System.Drawing.Point(111, 906);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(59, 60);
+            this.pictureBox4.Size = new System.Drawing.Size(55, 60);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 0;
             this.pictureBox4.TabStop = false;
@@ -109,9 +109,9 @@
             // 
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = global::DoListInWinForm.Properties.Resources.add_2;
-            this.pictureBox1.Location = new System.Drawing.Point(372, 908);
+            this.pictureBox1.Location = new System.Drawing.Point(373, 908);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(52, 57);
+            this.pictureBox1.Size = new System.Drawing.Size(50, 55);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;

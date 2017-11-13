@@ -13,11 +13,15 @@ namespace DoListInWinForm
     public partial class Form_MainForm : Form
     {
         Font nameFont = new Font("微软雅黑", 12);
-        bool ShowUnfinished = true;
-
+        bool ShowUnfinished = true; 
+        Timer refreshTimer = new Timer() { Interval = 1800000 }; //每隔30分钟刷新页面
+       
         public Form_MainForm()
         {
             InitializeComponent();
+            refreshTimer.Start();
+            refreshTimer.Tick += (s, arg) => { DisplayAll(); };
+            //this.Activated += (s, arg) => { DisplayAll(); }; //每次光标进入程序刷新，已被废弃
             DataReader dataReader = new DataReader();
             dataReader.ReadAll();
             DisplayAll();
@@ -215,6 +219,15 @@ namespace DoListInWinForm
         private void worksPanel_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void SettingButton_click(object sender, EventArgs e)
+        {
+            new Form_SettingForm()
+            {
+                StartPosition = FormStartPosition.CenterScreen
+            }
+            .Show();
         }
     }
 }
