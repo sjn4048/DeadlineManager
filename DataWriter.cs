@@ -1,15 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.IO;
 
 namespace DoListInWinForm
 {
-    class DataWriter
+    internal class DataWriter
     {
-        public void WriteIntoCSV(TodoData data)
+        public void WriteIntoCsv(TodoData data)
         {
             using (FileStream file = new FileStream("DoList.dat", FileMode.Append, FileAccess.Write, FileShare.ReadWrite))
             {
@@ -20,7 +17,7 @@ namespace DoListInWinForm
             }
         }
 
-        public void WriteIntoCSV(List<TodoData> doList)
+        public void WriteIntoCsv(List<TodoData> doList)
         {
             using (FileStream file = new FileStream("DoList.dat", FileMode.Create, FileAccess.Write, FileShare.ReadWrite))
             {
