@@ -74,6 +74,9 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TodoData.cs" />
+    <EmbeddedResource Include="AddNewForm.resx">
+      <DependentUpon>AddNewForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CalendarForm.resx">
       <DependentUpon>CalendarForm.cs</DependentUpon>
     </EmbeddedResource>
