@@ -10,4 +10,4 @@ Calendar view;
 Deadline classification.
 
 ## About Author
-(Jianing Shi)[mailto:sjn4048@gmail.com]
+[Jianing Shi](mailto:sjn4048@gmail.com)
